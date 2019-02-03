@@ -9,6 +9,11 @@
         {% endif %}
     </head>
     <body>
-
+<!-- Sources -->
+<h2>Sources</h2>
+<ul>
+{%for news_source in sources%}
+<li>{{ news_source.title }}</li>
+</ul>
     </body>
 </html>
