@@ -2,7 +2,7 @@ import unittest
 from .models import sources
 Sources = sources.Sources
 
-class Testsources(unittest.Testcase):
+class Testsources(unittest.TestCase):
     '''
     Test class to test the behaviour of the Sources class
     '''
@@ -11,4 +11,10 @@ class Testsources(unittest.Testcase):
         '''
         Set up method that will run before every Test
         '''
-        self.new_source = Sources()
+        self.new_source = Sources(3159,'mpasho','willy Paul did somethihng today','something.com','some category','some country')
+
+    def test_instance(self):
+        self.assertTrue(isinstance(self.new_source,Sources))
+
+if __name__ == '__main__':
+    unittest.main()
