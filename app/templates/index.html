@@ -1,18 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    {% if title%}
-    <title>{{ title }}</title>
-    {% else %}
-    <title>Welcome to NewsWorthy</title>
-    {% endif %}
-</head>
-<body>
+{% import 'macros.html' as macro%}
+{% extends 'base.html'%}
+
+
+    {% block content %}
+    <h1>NewsFeed</h1>
     <ul>
-        {% for news_source in news_sources%}
+         {{ macro.displaySourcesList(news_sources)}}
+        <!-- {% for news_source in news_sources%}
         <li>{{news_source.name}}</li>
-        {% endfor %}
+        <p>{{news_source.description}}</p>
+        {% endfor %} -->
     </ul>
-</body>
-</html>
+{% endblock%}

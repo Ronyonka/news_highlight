@@ -1,0 +1,22 @@
+{% extends 'bootstrap/base.html'%}
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        {% if title %}
+        <title> {{ title }}</title>
+        {% else %}
+        <title>Welcome to NewsWorthy</title>
+        {% endif %}
+    </head>
+    <body>
+        
+        <!-- Content block -->
+
+        {% block content %}
+        <h1>NewsFeed</h1>
+
+        {% endblock%}
+    </body>
+</html>

@@ -43,12 +43,12 @@ def process_results(sources_list):
         id =sources_item.get('id')
         name = sources_item.get('name')
         title = sources_item.get('title')
-        urlToImage = sources_item.get('urlToImage')
+        description = sources_item.get('description')
         author = sources_item.get('author')
         publishedAt = sources_item.get('publishedAt')
 
        
-        sources_object = Sources(id,name,title,urlToImage,author,publishedAt)
+        sources_object = Sources(id,name,title,description,author,publishedAt)
         sources_results.append(sources_object)
 
     return sources_results
