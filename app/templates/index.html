@@ -3,9 +3,14 @@
 
 
     {% block content %}
-    <h1>NewsFeed</h1>
+
     <ul>
-         {{ macro.displaySourcesList(news_sources)}}
+        <div class="row">
+
+        {{ macro.displaySourcesList(news_sources)}}
+  
+        </div>
+         
         <!-- {% for news_source in news_sources%}
         <li>{{news_source.name}}</li>
         <p>{{news_source.description}}</p>
