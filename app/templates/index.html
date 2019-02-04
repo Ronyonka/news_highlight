@@ -9,6 +9,10 @@
     {% endif %}
 </head>
 <body>
-    
+    <ul>
+        {% for news_source in news_sources%}
+        <li>{{news_source.name}}</li>
+        {% endfor %}
+    </ul>
 </body>
 </html>
