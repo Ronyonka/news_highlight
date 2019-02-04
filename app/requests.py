@@ -10,11 +10,11 @@ api_key = app.config['NEWS_API_KEY']
 # Getting the movie base url
 base_url = app.config["NEWS_API_BASE_URL"]
 
-def get_sources(sources):
+def get_sources(category):
     '''
     Function that gets the json response to our url request
     '''
-    get_sources_url = 'https://newsapi.org/v1/sources'.format(sources,api_key)
+    get_sources_url = 'https://newsapi.org/v1/sources'.format(category,api_key)
     
     with urllib.request.urlopen(get_sources_url) as url:
         get_sources_data = url.read()
