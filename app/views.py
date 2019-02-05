@@ -10,15 +10,20 @@ def index():
     View root page function that returns the index page and its data
     '''
     title = 'Home - Welcome to your first stop shop for news'
+    
+
+    
     news_sources = get_sources('sources')
-    return render_template('index.html', title = title,news_sources = news_sources)
+    print(news_sources)
 
-@app.route('/source/<int:source_id>')
-def news(source_id):
+    return render_template('index.html', title = title, sources = news_sources)
 
-    '''
-    View movie page function that returns the source details
-    '''
-    title = 'Home - Welcome to your first stop shop for news'
-    return render_template('news.html',title= title,id = source_id)
+# @app.route('/source/<int:source_id>')
+# def news(source_id):
+
+#     '''
+#     View movie page function that returns the source details
+#     '''
+#     title = 'Home - Welcome to your first stop shop for news'
+#     return render_template('news.html',title= title,id = source_id)
 
