@@ -1,19 +1,44 @@
 {% import 'macros.html' as macro%}
 {% extends 'base.html'%}
 
-
+{% block styles%}
+    {{ super() }}
+    <link rel="stylesheet" href="{{url_for('static',filename='css/index.css')}}">
+{% endblock %}
     {% block content %}
 
-    <ul>
-        <div class="row">
 
-        {{ macro.displaySourcesList(news_sources)}}
-  
-        </div>
-         
-        <!-- {% for news_source in news_sources%}
-        <li>{{news_source.name}}</li>
-        <p>{{news_source.description}}</p>
-        {% endfor %} -->
-    </ul>
+    <h1 style="text-align: center">NewsWorthy</h1>
+    <hr>
+    <br>
+    
+    <div class="row">
+    <h2>General News</h2>
+    <ul>
+    {{ macro.displaySourcesList(general)}}
+    </ul> 
+    </div>
+
+    <div class="row">
+    <h2>Tech News</h2> 
+    <ul>
+    {{ macro.displaySourcesList(technology)}}
+    </ul> 
+    </div>
+
+    <div class="row">
+    <h2>Business News</h2> 
+    <ul>
+    {{ macro.displaySourcesList(business)}}
+    </ul>  
+    </div>
+
+    <div class="row">
+    <h2>Sports News</h2> 
+    <ul>
+    {{ macro.displaySourcesList(sports)}}
+    </ul>  
+    </div>
+
+
 {% endblock%}
