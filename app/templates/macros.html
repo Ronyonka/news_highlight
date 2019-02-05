@@ -5,11 +5,26 @@
             <div class="card card-inverse" style="background-color:#BFC0C0; border-color: #333; height:140px;">
                     <div class="card-block">
         <h3 class="card-title">{{ source.name}}</h3>
-        <p class="card-text">{{ source.description}}</p>
+        <p class="card-text">{{ source.description | truncate(100)}}</p>
+        <a href="/articles/{{source.id}}" class="btn" style="color: #fff; background-color: #000;">See more from this site</a>
         </div>
         </div>
         </div>
         
     {% endfor %}
 
+{% endmacro %}
+{% macro displayArticleList(article_list) %}
+
+    {% for article in article_list %}
+      <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4" style="margin-bottom: 20px;">
+          <img src="{{article.urlToImage}}" alt="{{article.title}}" class="img-responsive" style="height: 200px;">
+          <h4>{{article.title | truncate(35)}}</h4>
+          <p>{{article.description | truncate(80)}}</p>
+          <br>
+            <small>Published At: {{article.publishedAt}}</small>
+            <br>
+          <a href="{{article.url}}" target="_blank" class="btn" style="background-color: #000; color: #fff; margin-top: 5px;">Read more...</a>
+      </div>
+    {% endfor %}
 {% endmacro %}

@@ -3,9 +3,11 @@ class Articles:
     articles class to define sources Objects
     '''
 
-    def __init__(self,title,author,description,urlToImage,publishedAt):
+    def __init__(self,id,title,description,author,urlToImage,publishedAt,content):
+        self.id = id
         self.title = title
-        self.author = author
         self.description = description
+        self.author = author
         self.urlToImage = urlToImage
         self.publishedAt = publishedAt
+        self.content = content

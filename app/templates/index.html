@@ -6,12 +6,14 @@
     <link rel="stylesheet" href="{{url_for('static',filename='css/index.css')}}">
 {% endblock %}
     {% block content %}
+<div class="container">
+
 
 
     <h1 style="text-align: center">NewsWorthy</h1>
     <hr>
     <br>
-    
+
     <div class="row">
     <h2>General News</h2>
     <ul>
@@ -39,6 +41,6 @@
     {{ macro.displaySourcesList(sports)}}
     </ul>  
     </div>
-
+</div>
 
 {% endblock%}
