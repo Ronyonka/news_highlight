@@ -25,9 +25,10 @@ def index():
 #     '''
     
 #     return render_template('articles.html',id = id, articles = articles)
+
 @app.route('/articles/<id>')
-def articles(id):
+def article(id):
     '''View a specific source page and its articles'''
     articles = get_articles(id)
     title = f'{id}'
-    return render_template('articles.html',title = title, id = id, articles = articles)
+    return render_template('articles.html',title = title, id = id, newarticles = articles)

@@ -52,7 +52,7 @@ def process_results(sources_list):
 
 def get_articles(id):
     '''Function thet gets the json response to our url request'''
-    get_articles_url = "https://newsapi.org/v1/articles".format(id,api_key)
+    get_articles_url = articles_base_url.format(id, api_key)
 
     with urllib.request.urlopen(get_articles_url) as url:
         get_articles_data = url.read()
@@ -83,8 +83,9 @@ def process_articles(article_list):
         urlToImage = article_item.get('urlToImage')
         publishedAt = article_item.get('publishedAt')
         content = article_item.get('content')
+        url = article_item.get('url')
         if urlToImage:
-            article_object = Articles(id,title,description,author,urlToImage,publishedAt,content)
+            article_object = Articles(id,title,description,author,urlToImage,publishedAt,content,url)
             article_results.append(article_object)
 
     return article_results
