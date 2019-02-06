@@ -1,9 +1,10 @@
 from flask import render_template
-from app import app
-from .requests import get_sources,get_articles
-from .models import sources,articles
+from . import main
+from ..requests import get_sources,get_articles
+from ..models import Sources,Articles
+
 # Views
-@app.route('/')
+@main.route('/')
 def index():
 
     '''
@@ -26,9 +27,9 @@ def index():
     
 #     return render_template('articles.html',id = id, articles = articles)
 
-@app.route('/articles/<id>')
-def article(id):
+@main.route('/articles/<id>')
+def articles(id):
     '''View a specific source page and its articles'''
     articles = get_articles(id)
     title = f'{id}'
-    return render_template('articles.html',title = title, id = id, newarticles = articles)
+    return render_template('articles.html',title = title, id = id, articles = articles)
