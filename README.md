@@ -2,7 +2,7 @@
 
 ## Description.
 
-News Highlight application is a Python-flask application that shows a user news from different sources and allows them to keep up with this fast pace world.   
+News Highlight application is a Python-flask application that shows a user news from different sources and allows them to keep up with this fast pace world. Try it out...<https://ron-news.herokuapp.com/> 
 
 #### By **Ron Onyonka**
 
@@ -15,7 +15,7 @@ News Highlight application is a Python-flask application that shows a user news 
 
 ## Live Demo
 
-Here is a link to a live demo:[id]</>
+Here is a link to a live demo:<https://ron-news.herokuapp.com/>
 
 ## Setup/Installation Requirements
 * Python 3.6
