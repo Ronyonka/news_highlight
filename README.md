@@ -49,4 +49,4 @@ If you have any issues feel free to contact me at rononyonka@gmail.com.
 
 ## License
 
-MIT License. Copywright (c) 2018 _Ron Onyonka._
+MIT License. Copywright (c) 2019 _Ron Onyonka._
